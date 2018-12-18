@@ -22,5 +22,5 @@ c = np.array([a,b])
 # print(c)
 d = c.reshape([-1,2,4,4])
 print(d)
-
+aaabb
 print(d)
