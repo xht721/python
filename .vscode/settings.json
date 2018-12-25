@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "D:\\DevSoft\\Python\\Python36\\python.exe",
+    "python.pythonPath": "D:\\DevSoft\\Anaconda3\\python.exe",
     "python.unitTest.unittestArgs": [
         "-v",
         "-s",
