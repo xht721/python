@@ -33,15 +33,35 @@ import numpy as np
 # x = numpy.array([1,2,3],dtype = numpy.float64)
 # print (x) # 元素类型为float64
 # print (x.dtype)
-# x = numpy.random.rand(100)
-# y = numpy.random.uniform(1,-1,1)
+# x = np.random.rand(100)
+# y = np.random.uniform(1,-1,(2,3))
+# y1 = np.random.randn(1,1,-1)
+# print(y)
 # print(x)
 # print(y)
-# x = numpy.array([1,2,3,4])
-# x[numpy.newaxis]
+# x = np.array([1,2,3,4])
+# x1 = x[np.newaxis]
+# x2 = x.T[:np.newaxis]
 # print(x,x.ndim)
-
-a=[[[1,2,3],
-   [4,5,6]]]
-print("列表a如下：")
-print(np.array(a).shape)
+# print(x1,x1.ndim)
+# print(x2,x2.shape)
+# a=[[[1,2,3],
+#    [4,5,6]]]
+# print("列表a如下：")
+# print(np.array(a).shape)
+# a = np.arange(9).reshape(3,3)
+# print(a[1])
+# for row in a:
+#     print(row)
+A = np.array([[2,0,0],[2,1,2],[0,3,1]])
+Ainv = np.linalg.inv(A)
+B = np.array([[1,2,3],[3,2,1],[2,2,3]])
+# b1 = np.array([[1,1],[0,1]])
+# b2 = np.array([[1,2],[1,1]])
+# print(np.dot(b2,b1))
+# dev = np.linalg.det(B)
+# print(dev)
+# 
+# print(A1)
+E = np.dot(np.dot(Ainv,B),A)
+print(E)
