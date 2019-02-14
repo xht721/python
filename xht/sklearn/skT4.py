@@ -1,5 +1,5 @@
 import numpy as np 
-import matplotlib.pyplot as plt 
+# import matplotlib.pyplot as plt 
 # a = [[1,2,3],
 #     [4,5,6]]
 # # print(np.array(a).ndim)
@@ -60,13 +60,15 @@ import matplotlib.pyplot as plt
 
 t = [1960. , 1961. , 1962. ,1963.,1964.,1965.,1966.,1967.,1968.]
 s = [29.72 ,30.61 ,31.51 ,32.13 , 32.34 ,32.85 , 33.56 ,34.20 ,34.83]
-xdata =  np.vstack([t,np.ones(len(t))]).T
-ydata =  np.log(np.array(s))
-a , b = np.linalg.lstsq(xdata ,ydata  )[0]
-print(a,b)
+# xdata =  np.vstack([t,np.ones(len(t))]).T
+v = np.stack((t ,np.zeros(len(t))),axis=1)
+# ydata =  np.log(np.array(s))
+# a , b = np.linalg.lstsq(xdata ,ydata  )[0]
+# print(a,b)
+print(v)
 
-pro =  a * 2000 + b
-print(pro)
+# pro =  a * 2000 + b
+# print(pro)
 
 # plt.plot(t , s , 'r^')
 # plt.plot(t , int(a*t+b)  )
