@@ -5,8 +5,9 @@ import matplotlib.pyplot as plt
 x_date = [338.,333.,328.,207.,226.,25.,179.,60.,208.,606.]
 # x_datex = x_date[:,np.newaxis ]
 y_date = [640.,633.,619.,393.,428.,27.,193.,66.,226.,1591.]
-plt.figure()
-plt.scatter(x_date,y_date)
+fig =plt.figure()
+ax = fig.add_subplot(1,1,1)
+ax.scatter(x_date,y_date)
 
 
 
@@ -46,12 +47,16 @@ train =  optimizer.minimize(loss)
 init = tf.global_variables_initializer()
 with tf.Session() as sess:
     sess.run(init)
-    for i in range(900001):
+    for i in range(20001):
         sess.run(train)
-        if i%200 == 0 :
+        if i%10 == 0 :
           # print(sess.run("w value: %d , b value： %d " %w,b))
-          print("w value: %f , b value： %f " % (sess.run(w),sess.run(b)))
-          # plt.plot()
-          # plt.show()
+          # print("w value: %f , b value： %f " % (sess.run(w),sess.run(b)))
+          lines = ax.plot(x_date,sess.run(y))
+          plt.pause(0.1)
+          ax.lines.remove(lines[0])
+          
+plt.ion()
+plt.show()
 
 

@@ -65,5 +65,11 @@ import numpy as np
 # print(A1)
 # E = np.dot(np.dot(Ainv,B),A)
 # print(E)
-x= np.arange(-200,100,1)
-print(x)
+# x= np.arange(-200,100,1)
+# print(x)
+# x1 = np.array([[1,2],[3,4]])
+# x2 = np.array([[3,2],[1,4]])
+x1 = np.array([1,2,3,4])[:,np.newaxis]
+x2 = np.array([1,2,3])
+x3 = np.dot(x1,x2)
+print(x3)

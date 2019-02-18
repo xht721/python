@@ -4,7 +4,7 @@ import numpy as np
 # print(x_data)
 # y_data =  x_data*1.2 + 2
 
-# weight =  tf.Variable(tf.random_uniform([1],-1.0,1.0))
+weight =  tf.Variable(tf.random_uniform([1],-1.0,1.0))
 # biases = tf.Variable(tf.zeros([1]))
 
 # y=weight*x_data + biases
@@ -13,6 +13,7 @@ import numpy as np
 # optimizer =  tf.train.GradientDescentOptimizer(0.5)
 # train = optimizer.minimize(loss)
 # init = tf.initialize_all_variables()
+init = tf.global_variables_initializer()
 
 # sess = tf.Session()
 # sess.run(init)
